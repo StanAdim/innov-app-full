@@ -11,6 +11,7 @@ up:
 
 composer-update:
 	docker exec ictc-app bash -c "composer update"
+	docker exec ictc-app bash -c "cp .env.example .env"
 	docker exec ictc-app bash -c "php artisan key:generate"
 	
 optimize:

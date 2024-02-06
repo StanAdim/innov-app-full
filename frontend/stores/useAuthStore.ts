@@ -40,7 +40,7 @@ export const useAuthStore = defineStore('auth', () => {
           body: info as UserInfo
         });
         // console.log(registerRespose)
-        navigateTo('/guest/login')
+        navigateTo('/auth/dashboard')
         return registerRespose;
     }
     //Login User

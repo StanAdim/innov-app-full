@@ -3,6 +3,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   app: {
       head: {
+        title: 'ICT Commission',
           "meta": [
             {
               "name": "viewport",
@@ -10,7 +11,9 @@ export default defineNuxtConfig({
             },
             { "charset": "utf-8"}
           ],
-          "link": [],
+          "link": [
+            { rel: "icon", type: "image/x-icon", href: "/logo.png" },
+          ],
           "style": [],
           "script": [],
           "noscript": []
