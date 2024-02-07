@@ -24,10 +24,14 @@ async function handleLogout(){
         <!-- Navbar -->
         <div class="bg-white shadow">
             <div class="container mx-auto">
-                <div class="flex justify-between items-center py-4 px-2">
+                <div class="flex justify-end items-center py-4 px-6 space-x-4">
+                    
                     <h1 class="text-xl font-semibold">
-                      <NuxtLink to="/auth/dashboard">ICTC - <small>Dashboard</small></NuxtLink>
+                      <NuxtLink to="/">ICTC - <small>Admin</small></NuxtLink>
                     </h1>
+                    <nuxtLink v-if="!auth.isLoggedIn" to="/guest/login" class="text-gray-500 hover:text-gray-600" id="open-sidebar">
+                        Login
+                    </nuxtLink>
                     <button v-if="auth.isLoggedIn" @click="handleLogout()" class="text-gray-500 hover:text-gray-600" id="open-sidebar">
                         Logout
                     </button>

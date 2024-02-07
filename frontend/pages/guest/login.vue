@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 const formData = ref({
-  email: "test@example.com",
+  email: "adim@mail.com",
   password: "password",
 });
 const auth = useAuthStore()

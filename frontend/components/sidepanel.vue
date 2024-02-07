@@ -15,6 +15,9 @@ async function handleLogout (){
                 <router-link to="/auth/dashboard" class="block hover:text-teal-900">Dashboard</router-link>
             </li>
             <li class="my-1 text-center hover:bg-sky-300 hover:rounded-lg">
+                <router-link to="/auth/features/collection" class="block hover:text-teal-900">Featuring</router-link>
+            </li>
+            <li class="my-1 text-center hover:bg-sky-300 hover:rounded-lg">
                 <router-link to="/auth/posts/collection" class="block hover:text-teal-900">Posts</router-link>
             </li>
             <li class="my-1 text-center hover:bg-sky-300 hover:rounded-lg">

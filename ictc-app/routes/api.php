@@ -1,5 +1,9 @@
 <?php
 
+use App\Http\Controllers\BannerController;
+use App\Http\Controllers\BlogPostController;
+use App\Http\Controllers\FeatureController;
+use App\Http\Controllers\LeaderController;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -15,7 +19,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware(['auth:sanctum'])->get('/user', function (Request $request) {return $request->user();});
-Route::middleware(['auth:sanctum'])->get('/users', function (Request $request) {return response()->json([
-    'data'=> User::all()
-]);});
+Route::middleware(['auth:sanctum'])->group(function () {
+    // Your protected routes go here
+    Route::resource('/auth/blog-post',BlogPostController::class);
+    Route::resource('/auth/medium-banner',BannerController::class);
+    Route::resource('/auth/commission-leader',LeaderController::class);
+    Route::resource('/auth/medium-feature',FeatureController::class);
+
+
+    //logged In
+    Route::get('/user', function (Request $request) {return $request->user();});
+    Route::get('/users', function () {return response()->json([
+        'data'=> User::all()
+    ]);});
+});

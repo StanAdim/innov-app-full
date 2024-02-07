@@ -1,13 +1,16 @@
-<script lang="ts" setup>
+<script setup>
 const formData = ref({
   title: '',
   body: '',
-  tag: '',
-  category:'',
-  imagePath:'',
+  slug: '',
+  categoryId:'',
+  imgPath:'/images/post',
 })
+const blog = useBlogStore()
+const appData = useAppStore();
 async function handleForm(){
-  console.log(formData.value)
+  const response = await blog.createPost(formData.value)
+  appData.switchTab(0)
 }
 
 </script>
@@ -18,7 +21,7 @@ async function handleForm(){
     <form class="space-y-8" @submit.prevent="handleForm">
         <div class="space-y-3 px-4">
           <div class="space-y-2">
-            <label class="text-sm text-slate-600 font-normal">Title</label>
+            <label class="text-sm text-slate-600 font-normal">Blog Title</label>
             <input
               type="text"
               placeholder="title"
@@ -26,17 +29,17 @@ async function handleForm(){
               class="w-full text-sm p-2 rounded-md ring-[1px] ring-gray-600/10" />
           </div>
           <div class="space-y-2">
-            <label class="text-sm text-slate-600 font-normal">Tag</label>
+            <label class="text-sm text-slate-600 font-normal">Blog Slug</label>
             <input
               type="text"
-              placeholder="title"
-              v-model="formData.tag"
+              placeholder="example-blog-link"
+              v-model="formData.slug"
               class="w-full text-sm p-2 rounded-md ring-[1px] ring-gray-600/10" />
           </div>
           <div class="space-y-2">
             <label class="text-sm text-slate-600 font-normal">Category</label>
             <select 
-            v-model="formData.category"
+            v-model="formData.categoryId"
             class="w-full p-2 bg-white rounded-md ring-[1px] ring-gray-600/10 text-sm">
               <option selected disabled>Select Category</option>
               <option value="admin">Admin</option>
@@ -54,7 +57,7 @@ async function handleForm(){
           </div>
           
           <div class="w-full space-y-2">
-            <label class="text-sm text-slate-600 font-normal">Image</label>
+            <label class="text-sm text-slate-600 font-normal">Blog Image</label>
             <label
               for="dropzone-file"
               class="flex flex-col items-center justify-center w-full border-2 border-indigo-300 border-dashed rounded-lg cursor-pointer bg-[#eff7fe] hover:bg-[#eff7fe]/30">
@@ -87,7 +90,6 @@ async function handleForm(){
         </div>
         <hr />
         <div class="text-right px-4 text-sm space-x-8">
-          <a href="#" class="cursor-pointer">Cancel</a>
           <button class="bg-sky-500 px-8 py-2 text-white rounded-md hover:bg-sky-400">
             Create
           </button>

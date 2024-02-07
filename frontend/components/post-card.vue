@@ -1,35 +1,10 @@
 <script setup>
-const posts = ref([
-  {id: 1,title: 'This is first Post',
-  body: `Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Voluptatibus quia, nulla! Maiores et perferendis eaque,
-                exercitationem praesentium nihil.`,
-  tag: '#Software'  
-},
-  {id: 2,title: 'This is first Post',
-  body: `Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Voluptatibus quia, nulla! Maiores et perferendis eaque,
-                exercitationem praesentium nihil.`,
-  tag: '#AI'  
-},
-  {id: 3,title: 'This is first Post',
-  body: `Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Voluptatibus quia, nulla! Maiores et perferendis eaque,
-                exercitationem praesentium nihil.`,
-  tag: '#Technology'  
-},
-  {id: 4,title: 'This is first Post',
-  body: `Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Voluptatibus quia, nulla! Maiores et perferendis eaque,
-                exercitationem praesentium nihil.`,
-  tag: '#BigData'  
-},
-])
-
+const blog = useBlogStore();
+const {data} = await blog.getAllPost()
 </script>
-<template>
+<template v-if="blog.hasBlogPosts">
      <!-- Start CARD -->
-     <div v-for="item in posts" :key="item.id" class="md:w-1/3 p-2">
+     <div  v-for="item in data.data" :key="item.id" class="md:w-1/3 p-2">
           <div
             class="rounded overflow-hidden shadow-lg bg-white hover:bg-blue-300 hover:text-white"
           >
@@ -42,7 +17,11 @@ const posts = ref([
               <div class="pt-2 pb-1">
                 <span
                   class="inline-block bg-blue-200 rounded-full px-3 py-1 text-sm font-semibold text-blue-700 mr-2 mb-2"
-                  >{{ item.tag }}</span
+                  >{{ item.categoryId }}</span
+                >
+                <span
+                  class="inline-block bg-teal-200 rounded-full px-3 py-1 text-sm font-semibold text-teal-700 mr-2 mb-2"
+                  >{{item.updated_at}}</span
                 >
               </div>
               <div class="font-bold text-xl mb-2">{{ item.title }}</div>

@@ -8,7 +8,7 @@ const appData = useAppStore();
 <template>
   <div class="w-full">
     <div class="pageHeading">
-      <h1 class="text-2xl font-semibold mx-auto">Medium Banners</h1>
+      <h1 class="text-2xl font-semibold mx-auto">Features</h1>
     </div>
     <div class=" bg-sky-50 flex justify-center h-screen">
       <div >
@@ -19,7 +19,7 @@ const appData = useAppStore();
             class=" hover:bg-sky-100 text-gray-700 font-semibold rounded-t focus:outline-none mx-px py-2 px-20"
             type="button"
           >
-            All Medium Banners
+            All Features
           </button>
           <button
             @click="appData.switchTab(1)"
@@ -27,7 +27,7 @@ const appData = useAppStore();
             class=" hover:bg-sky-100 text-gray-700 font-semibold rounded-t focus:outline-none mx-px py-2 px-20"
             type="button"
           >
-            Create Medium Banner
+            Create Feature
           </button>
           <button
             @click="appData.switchTab(2)"
@@ -35,7 +35,7 @@ const appData = useAppStore();
             class=" hover:bg-sky-100 text-gray-700 font-semibold rounded-t focus:outline-none mx-px py-2 px-20"
             type="button"
           >
-           Banner List
+          Feature Lists
           </button>
           
         </div>
@@ -45,7 +45,7 @@ const appData = useAppStore();
               <!-- Search Input -->
               <util-search-item />
               <div class="flex flex-wrap">
-                <banner-card />
+                <feature-card />
               </div>
               <!-- End GRID -->
             </div>
@@ -53,13 +53,13 @@ const appData = useAppStore();
           <li v-show="appData.tabValue === 1">
             <div class=" w-auto h-full bg-gray-100 container px-4 py-2 ">
             <!-- Form Create banner -->
-             <banner-form />
+             <feature-form />
             </div>
           </li>
           <li v-show="appData.tabValue === 2">
             <div class=" w-full h-full bg-gray-100 container px-4 py-2 ">
             <!-- Form Create banner -->
-             <banner-list />
+             <feature-list />
             </div>
           </li>
         
