@@ -8,6 +8,7 @@ type BlogInfo = {
 
 
 export const useBlogStore = defineStore('blog', () => {
+    const app = useAppStore();
     const blogPosts = ref < BlogInfo | null>(null)
     const hasBlogPosts = computed(() => !!blogPosts.value)
     const blogError = ref <any>(null)
@@ -18,7 +19,10 @@ export const useBlogStore = defineStore('blog', () => {
           method: 'POST',
           body: info as BlogInfo
         });
-        // console.log(blogResponse)
+        if(blogResponse.status?.value === "success"){
+            app.toogleLoading();
+        }
+        // console.log(blogResponse.status)
         navigateTo('/auth/posts/collection')
         getAllPost()
         return blogResponse;

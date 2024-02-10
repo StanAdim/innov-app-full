@@ -2,13 +2,22 @@
 
 <template>
   <div>
-    <h2 class="title">Landing Page</h2>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-      Unde illo eligendi mollitia, aspernatur, dolorum enim temporibus, exercitationem error 
-      reiciendis aliquam illum! Fugiat dolorum eveniet incidunt 
-      doloremque soluta, error laudantium et!
-    </p>
+    <div class="bg-gray-100 min-h-screen p-4">
+    <div class="container mx-auto pt-12 pb-20">
+        <h1 class="text-4xl font-bold text-gray-800 text-center mb-8">
+            ICT Commission
+        </h1>
+        
+        <div class="grid text-center">
+            <div class="bg-white rounded-lg shadow-lg p-8">
+                <h2 class="text-xl font-bold text-gray-800 mb-4">Website Management</h2>
+                <p class="text-gray-700">
+                    Manage Website Blog post, Banners, Leader and Features here
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
   </div>
 </template>
 

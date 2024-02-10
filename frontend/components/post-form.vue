@@ -9,6 +9,7 @@ const formData = ref({
 const blog = useBlogStore()
 const appData = useAppStore();
 async function handleForm(){
+  appData.toogleLoading()
   const response = await blog.createPost(formData.value)
   appData.switchTab(0)
 }

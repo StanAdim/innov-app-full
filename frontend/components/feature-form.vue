@@ -8,6 +8,7 @@ const formData = ref({
 const feature = useFeatureStore()
 const appData = useAppStore();
 async function handleForm(){
+  appData.toogleLoading()
   const response = await feature.createFeature(formData.value)
   appData.switchTab(0)
 }

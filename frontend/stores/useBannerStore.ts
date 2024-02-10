@@ -5,11 +5,10 @@ type BannerInfo = {
     description: string,
     imgPath: string,
 }
-
-
 export const useBannerStore = defineStore('banner', () => {
     const banners = ref < BannerInfo | null>(null)
     const hasBanners = computed(() => !!banners.value)
+    const appData = useAppStore()
     // const bannerError = ref <any>(null)
 
     //Create Banner
@@ -18,6 +17,9 @@ export const useBannerStore = defineStore('banner', () => {
           method: 'POST',
           body: info as BannerInfo
         });
+        if(bannerResponse.status?.value === "success"){
+            appData.toogleLoading();
+        }
         // console.log(bannerResponse)
         navigateTo('/auth/banners/collection')
         retriveBanners()

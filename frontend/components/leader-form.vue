@@ -9,7 +9,8 @@ const formData = ref({
 const leader = useLeaderStore()
 const appData = useAppStore();
 async function handleForm(){
-  console.log(formData)
+  appData.toogleLoading()
+  // console.log(formData)
   const response = await leader.addLeader(formData.value)
   appData.switchTab(0)
 }

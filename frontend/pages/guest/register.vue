@@ -10,7 +10,7 @@ const formData = ref({
 })
 const auth = useAuthStore()
 async function handleFormSubmission(){
-  console.log(formData.value)
+  // console.log(formData.value)
  await auth.register(formData.value)
 }
 </script>

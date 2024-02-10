@@ -34,12 +34,12 @@ export const useAuthStore = defineStore('auth', () => {
     }
     //Register User
     async function register(info: UserInfo){
-        await useApiFetch('/sanctum/csrf-cookie');
+        // await useApiFetch('/sanctum/csrf-cookie');
         const registerRespose = await useApiFetch('/auth/register',{
           method: 'POST',
           body: info as UserInfo
         });
-        // console.log(registerRespose)
+        console.log(registerRespose)
         navigateTo('/auth/dashboard')
         return registerRespose;
     }

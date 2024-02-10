@@ -10,6 +10,7 @@ export const useFeatureStore = defineStore('feature', () => {
     const features = ref < FeatureInfo | null>(null)
     const hasFeatures = computed(() => !!features.value)
     const featureError = ref <any>(null)
+    const appData = useAppStore();
 
     //Create Blog
     async function createFeature(info: FeatureInfo){
@@ -17,7 +18,10 @@ export const useFeatureStore = defineStore('feature', () => {
           method: 'POST',
           body: info as FeatureInfo
         });
-        console.log(response)
+        // console.log(response)
+        if(response.status?.value === "success"){
+            appData.toogleLoading();
+        }
         navigateTo('/auth/features/collection')
         retrieveFeatures()
         return response;

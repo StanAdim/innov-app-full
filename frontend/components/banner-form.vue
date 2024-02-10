@@ -9,8 +9,10 @@ const formData = ref({
 const banner = useBannerStore()
 const appData = useAppStore();
 async function handleForm(){
+  appData.toogleLoading()
   const response = await banner.createBanner(formData.value)
   appData.switchTab(0)
+  
 }
 
 </script>

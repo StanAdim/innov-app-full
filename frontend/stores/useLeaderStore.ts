@@ -12,6 +12,7 @@ export const useLeaderStore = defineStore('leader', () => {
     const leaders = ref < LeaderInfo | null>(null)
     const hasLeaders = computed(() => !!leaders.value)
     const blogError = ref <any>(null)
+    const appData = useAppStore();
 
     //Create Blog
     async function addLeader(info: LeaderInfo){
@@ -19,7 +20,10 @@ export const useLeaderStore = defineStore('leader', () => {
           method: 'POST',
           body: info as LeaderInfo
         });
-        console.log(response)
+        if(response.status?.value === "success"){
+            appData.toogleLoading();
+        }
+        // console.log(response)
         navigateTo('/auth/leaders/collection')
         retriveLeaders()
         return response;
