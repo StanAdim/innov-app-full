@@ -1,30 +1,30 @@
 services:
 
-  ictc-app:
-    container_name: ictc-app
+  newinnov-app:
+    container_name: newinnov-app
     build: .
     restart: unless-stopped
     volumes:
-      - ./ictc-app:/var/www/html
+      - ./api-app:/var/www/html
     ports:
-      - 8000:80
+      - 3021:80
 
-  mysql_db:
-    container_name: mysql_ictc
+  newinno_mysql_db:
+    container_name: mysql_newinnov
     image: mysql:8.0.33
     environment:
       MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: ictc_app
+      MYSQL_DATABASE: newinnov_app
     # volumes:
     #   - ./backups:/home/backups
     restart: unless-stopped
     ports:
-    - 3300:3306
+    - 3022:3306
   
-  phpmyadmin:
-    container_name: phpmyadmin_ictc
+  newinnov_phpmyadmin:
+    container_name: phpmyadmin_newinnov
     image: phpmyadmin:5.2.1
     ports:
-      - 8011:80
+      - 8023:80
     environment:
       - PMA_ARBITRARY=1

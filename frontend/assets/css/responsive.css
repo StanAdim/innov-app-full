@@ -1,0 +1,466 @@
+@media (min-width: 992px) {
+    .mobile-toggle {
+        display: none;
+    }
+    .menu {
+        display: block;
+    }
+}
+
+@media (max-width: 991px) {
+    .logo {
+        float: left;
+    }
+    .mobile-toggle {
+        float: right;
+    }
+    .menu {
+        display: none;
+    }
+    .header {
+        padding: 15px 0px;
+    }
+    .mobile-toggle a {
+        color: #666;
+        font-size: 24px;
+        padding: 7px 10px;
+        border: 2px solid #333;
+        line-height: 1;
+        display: inline-block;
+        cursor: pointer;
+    }
+    .hero-img img {
+        width: 90%;
+    }
+    .hero-img {
+        text-align: center;
+        margin-top: 40px;
+    }
+    .about-img {
+        display: none;
+    }
+    .about-info {
+        margin-top: 0px;
+    }
+    .hero-caption-full {
+        padding-top: 50px;
+    }
+    .do-best-content {
+        margin-top: 0px;
+    }
+    .do-best-content h5 {
+        padding-top: 0px;
+    }
+    .cloud-service-area {
+        padding-top: 0px;
+    }
+}
+
+@media (max-width: 767px) {
+    .about-area,
+    .testimonial-area,
+    .subscribe-area,
+    .contact-area,
+    .about-resources-wrapper,
+    .dosoft-faq-section {
+        padding: 70px 0px;
+    }
+    .services-area,
+    .do-best-area,
+    .counter-area,
+    .latest-blog,
+    .provide-services-area,
+    .dosoft-team-area,
+    .dosoft-pricing-section,
+    .dosoft-pricing-plane-style-2,
+    .blog-area {
+        padding-top: 70px;
+        padding-bottom: 40px;
+    }
+    .do-best-content h3 {
+        margin-bottom: 15px;
+        font-size: 30px;
+    }
+    .subscribe-content h2 {
+        font-size: 30px;
+        margin-bottom: 15px;
+    }
+    .footer-widgets {
+        margin-top: 0px;
+    }
+    .cloud-service-area {
+        padding-bottom: 40px;
+    }
+    .breadcrumb-area {
+        padding-top: 150px;
+        padding-bottom: 100px;
+    }
+    .dosoft-faq-form {
+        margin-top: 70px;
+    }
+    .error-content.text-center img {
+        width: 85%;
+        margin: 0 auto;
+    }
+    .error-content h4 {
+        margin-top: 24px;
+        font-size: 22px;
+    }
+    .privacy-policy {
+        padding: 50px 0px;
+    }
+    .privacy-policy-content h2 {
+        font-size: 26px;
+    }
+    .blog-details-area .content h2 {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-caption-full h2 {
+        font-size: 30px;
+    }
+    .shap-1 {
+        max-width: 400px;
+        top: 130px;
+        left: 0;
+        width: 100%;
+    }
+    .about-area,
+    .testimonial-area,
+    .subscribe-area,
+    .contact-area,
+    .about-resources-wrapper,
+    .dosoft-faq-section {
+        padding: 50px 0px;
+    }
+    .services-area,
+    .do-best-area,
+    .counter-area,
+    .latest-blog,
+    .provide-services-area,
+    .dosoft-team-area,
+    .dosoft-pricing-section,
+    .dosoft-pricing-plane-style-2,
+    .blog-area {
+        padding-top: 50px;
+        padding-bottom: 20px;
+    }
+    .cloud-service-area {
+        padding-bottom: 20px;
+    }
+    .about-info h2 {
+        font-size: 28px;
+        margin-bottom: 10px;
+    }
+    .do-best-content h5 {
+        padding-top: 0px;
+        margin-bottom: 6px;
+    }
+    .do-best-content h3 {
+        font-size: 26px;
+    }
+    .subscribe-content h2 {
+        font-size: 26px;
+        margin-bottom: 10px;
+    }
+    .subscribe-content p {
+        font-size: 17px;
+        margin-bottom: 27px;
+    }
+    .breadcrumb-content h3.breadcrumb-title {
+        font-size: 35px;
+        margin-bottom: 3px;
+    }
+    .contact-map {
+        height: 300px;
+    }
+    .about-resources-wrapper-img img {
+        width: 95%;
+    }
+    .about-resources-wrapper-content-full h5 {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+    .about-resources-wrapper-content-full h2 {
+        font-size: 28px;
+        line-height: 36px;
+    }
+    .pricing-single-style-2.active {
+        transform: scale(1.02);
+    }
+    .dosoft-faq-form {
+        margin-top: 50px;
+    }
+    .privacy-policy {
+        padding: 40px 0px;
+    }
+    .privacy-policy-content h2 {
+        font-size: 22px;
+        margin-bottom: 6px;
+    }
+    .privacy-policy-content h3 {
+        font-size: 18px;
+        margin-bottom: 4px;
+    }
+    .services-detail .contanet h2 {
+        font-size: 20px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+    .blog-details-area .content h2 {
+        font-size: 18px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+    .blog-details-area .content .meta ul li {
+        margin: 0px 5px;
+        font-size: 14px;
+    }
+    .blog-details-area .content p.deficult {
+        padding: 14px;
+        margin-left: 0px;
+    }
+}
+
+@media (max-width: 420px) {
+    .hero-caption-full h2 {
+        font-size: 24px;
+    }
+    .testimonial-single {
+        padding: 30px 10px;
+        width: 98%;
+    }
+    .subscribe-content .form input {
+        height: 50px;
+        padding: 0px 10px;
+    }
+    .subscribe-content .form button {
+        height: 50px;
+        padding: 0px 15px;
+    }
+    .blog-details-area .content p {
+        font-size: 14px;
+        line-height: 26px;
+        margin-bottom: 10px;
+    }
+    .blog-details-area .content ul {
+        padding-left: 0px;
+        margin-bottom: 15px;
+    }
+    .blog-details-area .content ul li {
+        line-height: 25px;
+        font-size: 14px;
+    }
+    .comment-thumb {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .comment-thumb img {
+        width: 80px;
+    }
+    .comment-body {
+        padding-left: 0px;
+        width: 100%;
+    }
+    .comment-single .comment-reply {
+        padding-left: 9px;
+        border-left: 3px solid #59e844;
+        box-sizing: border-box;
+    }
+    .comment-form h3 {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    .comment-form textarea {
+        height: 160px;
+    }
+    .comment-form {
+        padding: 30px 14px;
+    }
+    .cooment-list {
+        padding: 30px 10px;
+    }
+}
+
+@media (max-width: 360px) {
+    .mobile-off-canvas-menu {
+        max-width: 290px !important;
+        width: 100%;
+    }
+    .hero-caption-full h2 {
+        font-size: 20px;
+    }
+    .hero-caption-full p {
+        font-size: 16px;
+        line-height: 26px;
+    }
+    .hero-area {
+        padding-top: 120px;
+        padding-bottom: 45px;
+    }
+    .button-1 {
+        padding: 12px 30px;
+    }
+    .button-2 {
+        padding: 12px 30px;
+    }
+    .hero-btn a:nth-child(1) {
+        margin-bottom: 15px;
+    }
+    .about-info h2 {
+        font-size: 22px;
+    }
+    .about-info p {
+        line-height: 26px;
+        font-size: 15px;
+    }
+    .about-info ul li i {
+        font-size: 15px;
+        padding-right: 0px;
+        padding-left: 0px;
+    }
+    .about-info ul li {
+        line-height: 26px;
+        font-size: 15px;
+    }
+    .about-info .about-btn a:nth-child(1) {
+        margin-bottom: 15px;
+    }
+    .section-title p {
+        margin-top: 10px;
+        font-size: 15px;
+    }
+    .section-title h2 {
+        font-size: 24px;
+        margin-bottom: 6px;
+    }
+    .services-single {
+        transform: rotate(-2deg);
+    }
+    .do-best-content h3 {
+        font-size: 22px;
+    }
+    .do-best-content h5 {
+        font-size: 18px;
+    }
+    .testimonial-single-bottom p {
+        line-height: 25px;
+        font-size: 14px;
+    }
+    .testimonial-single-top .image {
+        width: 100%;
+        margin-bottom: 20px;
+        text-align: center;
+        float: inherit;
+    }
+    .testimonial-single-top .image img {
+        width: 80px;
+        border-radius: 50%;
+        margin: 0 auto;
+    }
+    .testimonial-single-top {
+        text-align: center;
+    }
+    .testimonial-single-top .text h3 span {
+        display: block;
+    }
+    .testimonial-single-bottom {
+        text-align: center;
+    }
+    .latest-blog-content h2 {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+    .subscribe-content h2 {
+        font-size: 22px;
+        margin-bottom: 10px;
+    }
+    .subscribe-content .form button {
+        padding: 0px 10px;
+        letter-spacing: 0px;
+    }
+    .cloud-service-single {
+        display: inherit;
+    }
+    .cloud-service-single .icon {
+        width: 100%;
+        overflow: hidden;
+        text-align: center;
+    }
+    .cloud-service-single .text {
+        padding-left: 0px;
+        overflow: hidden;
+        width: 100%;
+        text-align: center;
+        padding-top: 10px;
+    }
+    .provide-services-single {
+        padding: 40px 10px;
+    }
+    .contact-form input {
+        padding: 12px 12px;
+    }
+    .contact-form textarea {
+        padding: 12px 12px;
+    }
+    .about-resources-wrapper-content-full h2 {
+        font-size: 22px;
+        line-height: 36px;
+    }
+    .pricing-item-full ul li {
+        padding: 0px 0px;
+    }
+    .dosoft-faq-form input {
+        padding: 12px 12px;
+    }
+    .dosoft-faq-form textarea {
+        padding: 12px 12px;
+    }
+    .accordion-item .accordion-header {
+        padding: 12px 12px;
+        font-size: 16px;
+    }
+    .error-content h4 {
+        font-size: 20px;
+    }
+    .blog-single .content h3 {
+        margin-top: 12px;
+        margin-bottom: 6px;
+        font-size: 16px;
+        line-height: 22px;
+    }
+    .blog-single .content .meta span {
+        padding-right: 8px;
+        font-size: 14px;
+    }
+    .recent-blog-single .content h3 {
+        font-size: 14px;
+    }
+    .recent-blog-single .img {
+        width: 70px;
+    }
+    .single-widgets {
+        padding: 25px 10px;
+    }
+    .blog-pagination {
+        margin-top: 10px;
+    }
+    .blog-pagination ul li a {
+        width: 35px;
+        margin: 0px 1px;
+        padding: 4px 0px;
+        font-size: 14px;
+    }
+    .blog-pagination ul li span {
+        width: 35px;
+        margin: 0px 1px;
+        padding: 4px 0px;
+        font-size: 14px;
+    }
+    .comment-form input {
+        padding: 12px 12px;
+        margin-bottom: 20px;
+    }
+}

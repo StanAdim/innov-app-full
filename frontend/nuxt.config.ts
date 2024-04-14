@@ -3,7 +3,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   app: {
       head: {
-        title: 'ICT Commission',
+        title: 'SIDO - ICTC',
           "meta": [
             {
               "name": "viewport",
@@ -18,6 +18,12 @@ export default defineNuxtConfig({
           "script": [],
           "noscript": []
         }
+  },
+  runtimeConfig :{
+    public: {
+      apiBaseUlr: 'http://localhost:3021/public', /// -----Local
+      // apiBaseUlr: 'http://41.59.225.216:9050/public', /// -----Live
+    }
   },
   modules: [
     // ...

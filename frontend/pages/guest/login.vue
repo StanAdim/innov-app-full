@@ -1,5 +1,8 @@
-<script lang="ts" setup>
-const formData = ref({});
+<script setup>
+const formData = ref({
+  email: 'ictsupport@ictc.go.tz',
+  password: '123456'
+});
 const auth = useAuthStore()
 const app = useAppStore()
 const errorMessage = ref('')
