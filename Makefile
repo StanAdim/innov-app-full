@@ -8,6 +8,8 @@ stop:
 	docker compose stop
 up:
 	docker compose up -d
+enfront: 
+	yarn build && pm2 start ecosystem.config.cjs
 
 composer-update:
 	docker exec newinnov-app bash -c "composer update"
@@ -32,5 +34,5 @@ boost:
 	docker exec  newinnov-app bash -c "php artisan optimize"
 	docker exec  newinnov-app bash -c "composer dump-autoload"
 
-# backup_db: 
-	# docker exec mysql_db bash -c "./home/backups/backup_script.sh"
+backup_db: 
+	 docker exec mysql_db bash -c "./home/backups/backup_script.sh"

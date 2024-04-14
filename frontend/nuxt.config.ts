@@ -21,8 +21,8 @@ export default defineNuxtConfig({
   },
   runtimeConfig :{
     public: {
-      apiBaseUlr: 'http://localhost:3021/public', /// -----Local
-      // apiBaseUlr: 'http://41.59.225.216:9050/public', /// -----Live
+      // apiBaseUlr: 'http://localhost:3021/public', /// -----Local
+      apiBaseUlr: 'http://41.59.225.216:3021/public', /// -----Live
     }
   },
   modules: [
