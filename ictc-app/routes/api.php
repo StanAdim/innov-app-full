@@ -5,6 +5,7 @@ use App\Http\Controllers\BlogPostController;
 use App\Http\Controllers\FeatureController;
 use App\Http\Controllers\GeneralAppController;
 use App\Http\Controllers\LeaderController;
+use App\Models\BlogPost;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -20,7 +21,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 //Website routes
-Route::get('/site/posts' ,function(){return response()->json(['message'=> 'Website Posts']);});
+Route::get('/site/posts' ,function(){return response()->json(['message'=> 'Website Posts', 'posts'=>BlogPost::all()]);});
 
 //Management Site routes
 

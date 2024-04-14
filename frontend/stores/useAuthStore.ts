@@ -45,11 +45,14 @@ export const useAuthStore = defineStore('auth', () => {
     }
     //Login User
     async function login(credentials: UserCredential){
-        await useApiFetch('/sanctum/csrf-cookie');
+         await useApiFetch('/sanctum/csrf-cookie');
         const loginResponse = await useApiFetch('/auth/login',{
           method: 'POST',
           body: credentials as UserCredential
         });
+        if(loginResponse?.data.value != null){
+
+        }
         await fetchUser()
         navigateTo('/auth/dashboard')
         return loginResponse;

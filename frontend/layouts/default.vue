@@ -12,6 +12,7 @@ async function handleLogout(){
 
 <template>
 <div class="bg-gray-100">
+
 <div class="h-screen flex overflow-hidden bg-gray-200">
     <!-- Sidebar -->
     <div @click="app.toogleDrawerState()" class="absolute bg-gray-800 text-white w-56 

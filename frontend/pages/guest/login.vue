@@ -1,13 +1,15 @@
 <script lang="ts" setup>
-const formData = ref({
-  email: "adim@mail.com",
-  password: "password",
-});
+const formData = ref({});
 const auth = useAuthStore()
 const app = useAppStore()
+const errorMessage = ref('')
 async function handleFormSubmission(){
   if(auth.isLoggedIn)return
-await auth.login(formData.value)
+  
+const {error} = await auth.login(formData.value)
+formData.value = {};
+errorMessage.value = error.value?.data?.message
+// console.log(error.value?.data?.message)
 }
 </script>
 <template>
@@ -21,10 +23,10 @@ await auth.login(formData.value)
       <h1 class="mb-6 uppercase font-bold [ text-xl md:text-2xl lg:text-2xl ]">
         Login
       </h1>
-      <p class="mb-6 [ text-sm text-[#1A2421]/70 text-opacity-50 ]">
+      <p  v-if="errorMessage === ''"  class="mb-6 [ text-sm text-[#1A2421]/70 text-opacity-50 ]">
         Enter a valid email email &amp; password in the fields below to Login.
       </p>
-
+      <p class="mb-6 [ text-sm text-red-900 text-opacity-90 ]" v-if="errorMessage != ''">{{errorMessage}}</p>
       <label
         for="email"
         class="relative block mb-4 text-black/50 focus-within:text-[#333]"
@@ -82,7 +84,7 @@ await auth.login(formData.value)
       >
         Continue</button>
     </form>
-   
+    
   </div>
 </template>
 
